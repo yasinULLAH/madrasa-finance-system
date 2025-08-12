@@ -58,7 +58,7 @@ if (workbox) {
     },
     {
         "url": "index.html",
-        "revision": "d03a5e34b0e4262cbfd33658165a53b0"
+        "revision": "986f1a12ab524b0da7cbb0c2fa111c58"
     },
     {
         "url": "logo.jpg",
@@ -74,7 +74,7 @@ if (workbox) {
     },
     {
         "url": "sw.js",
-        "revision": "a3eeb80ed0d8b2b346d6cc1b2964f2b3"
+        "revision": "eb49dc17a41bd1e4ce069e3e1338338b"
     },
     {
         "url": "fonts/LhWNMUPbN-oZdNFcBy1-DJYsEoTq5pudQ9L940pGPkB3Qt_-DK0.ttf",
