@@ -4,7 +4,6 @@ importScripts('https://storage.googleapis.com/workbox-cdn/releases/7.0.0/workbox
 if (workbox) {
     console.log(`Workbox is loaded.`);
     
-    // This message listener waits for a command from the web page to activate.
     self.addEventListener('message', (event) => {
       if (event.data && event.data.type === 'SKIP_WAITING') {
         console.log('Service Worker received SKIP_WAITING message, activating now.');
@@ -46,24 +45,36 @@ if (workbox) {
         "revision": "3d68d791052605e8692bab71b396a5f8"
     },
     {
-        "url": "build pwa make html app offline and installable yasin best working re-run this for updates.py",
+        "url": "build pwa make html app offline and installable yasin best working re-run this for updates new.py",
+        "revision": "6f204d68894960c2efd7b6379cfbddab"
+    },
+    {
+        "url": "Copy of build pwa make html app offline and installable yasin best working re-run this for updates.py",
         "revision": "ce8e62bbacde6a60773ea36bfc4dbb2a"
     },
     {
+        "url": "favicon.ico",
+        "revision": "9443c975b011f43a500e86f7cf458a9e"
+    },
+    {
         "url": "index.html",
-        "revision": "b50313c8bc725cf9cbd19c116f0e49d9"
+        "revision": "5dba64addbf78d5f0c76177512fe8746"
+    },
+    {
+        "url": "logo.jpg",
+        "revision": "468c04fa7845a4946699daefb0de9c78"
     },
     {
         "url": "manifest.json",
-        "revision": "ef4c0b8f133f23abb91ec5bb70d20c94"
+        "revision": "573ac5a0351bc257b4e6ddff5cd7ff4d"
     },
     {
         "url": "offline.html",
-        "revision": "986de93949013e958b0e14acd85491cd"
+        "revision": "ae51d343db40057d79a35f860555d2b1"
     },
     {
         "url": "sw.js",
-        "revision": "0f1f236edc89fdef3c9141274ffbdab9"
+        "revision": "b53f74addeef46a4fcf47e280a75b1e1"
     },
     {
         "url": "fonts/LhWNMUPbN-oZdNFcBy1-DJYsEoTq5pudQ9L940pGPkB3Qt_-DK0.ttf",
