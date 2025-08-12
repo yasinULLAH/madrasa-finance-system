@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 
 <html dir="rtl" lang="ur">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>مدرسہ فنانس مینیجر</title>
-<meta content="مدرسہ فنانس مینیجر - ایک مکمل مالیاتی انتظام کا نظام مدرسہ کے لیے۔ آمدنی، اخراجات، بجٹ، اور رپورٹس کا انتظام کریں۔" name="description"/>
-<meta content="مدرسہ، فنانس، منیجر، حساب کتاب، آمدنی، اخراجات، زکوٰۃ، صدقہ، عطیہ، بجٹ، پاکستان" name="keywords"/>
-<meta content="Yasin Ullah, Pakistan" name="author"/>
-<link crossorigin="anonymous" href="libs/bootstrap.min.css" rel="stylesheet"/>
-<link crossorigin="anonymous" href="libs/all.min.css" rel="stylesheet"/>
-<style>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>مدرسہ فنانس مینیجر</title>
+    <meta
+        content="مدرسہ فنانس مینیجر - ایک مکمل مالیاتی انتظام کا نظام مدرسہ کے لیے۔ آمدنی، اخراجات، بجٹ، اور رپورٹس کا انتظام کریں۔"
+        name="description" />
+    <meta content="مدرسہ، فنانس، منیجر، حساب کتاب، آمدنی، اخراجات، زکوٰۃ، صدقہ، عطیہ، بجٹ، پاکستان" name="keywords" />
+    <meta content="Yasin Ullah, Pakistan" name="author" />
+    <link crossorigin="anonymous" href="libs/bootstrap.min.css" rel="stylesheet" />
+    <link crossorigin="anonymous" href="libs/all.min.css" rel="stylesheet" />
+    <style>
         :root {
             --primary-color: #28a745;
             --secondary-color: #6c757d;
@@ -332,902 +335,977 @@
             top: 0px;
         }
     </style>
-<link href="manifest.json" rel="manifest"/></head>
+    <link href="manifest.json" rel="manifest" />
+</head>
+
 <body>
-<div id="passwordOverlay" style="display: none;">
-<div id="passwordPrompt">
-<h3 id="passwordPromptTitle"></h3>
-<input class="form-control mb-3" id="appPasswordInput" placeholder="پاسورڈ" type="password"/>
-<button class="btn btn-primary" id="passwordSubmitBtn"></button>
-<div class="text-danger mt-2" id="passwordError" style="display: none;"></div>
-</div>
-</div>
-<nav class="navbar navbar-expand-md navbar-dark">
-<div class="container-fluid">
-<a class="navbar-brand" href="#">
-<img alt="Logo" class="d-inline-block align-text-top ms-2" height="24" src="libs/logo.jpg" width="30"/>
-<span data-lang="مدرسہ فنانس مینیجر">مدرسہ فنانس مینیجر</span>
-</a>
-<button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
-<span class="navbar-toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse" id="navbarNav">
-<div aria-orientation="vertical" class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
-<a aria-controls="dashboard" aria-selected="true" class="nav-link active" data-bs-target="#dashboard" data-bs-toggle="pill" id="dashboard-tab" role="tab" type="button">
-<i class="fas fa-home me-2"></i><span data-lang="ڈیش بورڈ">ڈیش بورڈ</span>
-</a>
-<a aria-controls="transactions" aria-selected="false" class="nav-link" data-bs-target="#transactions" data-bs-toggle="pill" id="transactions-tab" role="tab" type="button">
-<i class="fas fa-exchange-alt me-2"></i><span data-lang="ٹرانزیکشنز">ٹرانزیکشنز</span>
-</a>
-<a aria-controls="financial-organization" aria-selected="false" class="nav-link" data-bs-target="#financial-organization" data-bs-toggle="pill" id="organization-tab" role="tab" type="button">
-<i class="fas fa-sitemap me-2"></i><span data-lang="مدرسہ کے مالیاتی شعبے">مدرسہ کے مالیاتی
+    <div id="passwordOverlay" style="display: none;">
+        <div id="passwordPrompt">
+            <h3 id="passwordPromptTitle"></h3>
+            <input class="form-control mb-3" id="appPasswordInput" placeholder="پاسورڈ" type="password" />
+            <button class="btn btn-primary" id="passwordSubmitBtn"></button>
+            <div class="text-danger mt-2" id="passwordError" style="display: none;"></div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img alt="Logo" class="d-inline-block align-text-top ms-2" height="24" src="libs/logo.jpg" width="30" />
+                <span data-lang="مدرسہ فنانس مینیجر">مدرسہ فنانس مینیجر</span>
+            </a>
+            <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"
+                class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div aria-orientation="vertical" class="nav flex-column nav-pills" id="v-pills-tab" role="tablist">
+                    <a aria-controls="dashboard" aria-selected="true" class="nav-link active"
+                        data-bs-target="#dashboard" data-bs-toggle="pill" id="dashboard-tab" role="tab" type="button">
+                        <i class="fas fa-home me-2"></i><span data-lang="ڈیش بورڈ">ڈیش بورڈ</span>
+                    </a>
+                    <a aria-controls="transactions" aria-selected="false" class="nav-link"
+                        data-bs-target="#transactions" data-bs-toggle="pill" id="transactions-tab" role="tab"
+                        type="button">
+                        <i class="fas fa-exchange-alt me-2"></i><span data-lang="ٹرانزیکشنز">ٹرانزیکشنز</span>
+                    </a>
+                    <a aria-controls="financial-organization" aria-selected="false" class="nav-link"
+                        data-bs-target="#financial-organization" data-bs-toggle="pill" id="organization-tab" role="tab"
+                        type="button">
+                        <i class="fas fa-sitemap me-2"></i><span data-lang="مدرسہ کے مالیاتی شعبے">مدرسہ کے مالیاتی
                             شعبے</span>
-</a>
-<a aria-controls="planning-forecasting" aria-selected="false" class="nav-link" data-bs-target="#planning-forecasting" data-bs-toggle="pill" id="planning-tab" role="tab" type="button">
-<i class="fas fa-calendar-alt me-2"></i><span data-lang="منصوبہ بندی">منصوبہ بندی</span>
-</a>
-<a aria-controls="reports" aria-selected="false" class="nav-link" data-bs-target="#reports" data-bs-toggle="pill" id="reports-tab" role="tab" type="button">
-<i class="fas fa-chart-line me-2"></i><span data-lang="رپورٹس">رپورٹس</span>
-</a>
-<a aria-controls="settings" aria-selected="false" class="nav-link" data-bs-target="#settings" data-bs-toggle="pill" id="settings-tab" role="tab" type="button">
-<i class="fas fa-cog me-2"></i><span data-lang="سیٹنگز">سیٹنگز</span>
-</a>
-<a class="nav-link" href="#" id="logout-tab" onclick="logout()">
-<i class="fas fa-sign-out-alt me-2"></i><span data-lang="لاگ آؤٹ">لاگ آؤٹ</span>
-</a>
-</div>
-</div>
-</div>
-</nav>
-<div class="d-flex">
-<div class="main-content flex-grow-1">
-<div class="tab-content" id="v-pills-tabContent">
-<div aria-labelledby="dashboard-tab" class="tab-pane fade show active" id="dashboard" role="tabpanel">
-<h2 class="mb-4" data-lang="ڈیش بورڈ">ڈیش بورڈ</h2>
-<div class="row">
-<div class="col-md-6 col-lg-3">
-<div class="card bg-success text-white">
-<div class="card-body">
-<h5 class="card-title" data-lang="عمومی فنڈ کا بیلنس">عمومی فنڈ کا بیلنس</h5>
-<p class="card-text fs-3" id="generalFundBalance">۰.۰۰ روپیہ</p>
-</div>
-</div>
-</div>
-<div class="col-md-6 col-lg-3">
-<div class="card bg-info text-white">
-<div class="card-body">
-<h5 class="card-title" data-lang="زکوٰۃ فنڈ کا بیلنس">زکوٰۃ فنڈ کا بیلنس</h5>
-<p class="card-text fs-3" id="zakatFundBalance">۰.۰۰ روپیہ</p>
-</div>
-</div>
-</div>
-<div class="col-md-6 col-lg-3">
-<div class="card bg-primary text-white">
-<div class="card-body">
-<h5 class="card-title" data-lang="کل آمدنی (اس مہینے)">کل آمدنی (اس مہینے)
+                    </a>
+                    <a aria-controls="planning-forecasting" aria-selected="false" class="nav-link"
+                        data-bs-target="#planning-forecasting" data-bs-toggle="pill" id="planning-tab" role="tab"
+                        type="button">
+                        <i class="fas fa-calendar-alt me-2"></i><span data-lang="منصوبہ بندی">منصوبہ بندی</span>
+                    </a>
+                    <a aria-controls="reports" aria-selected="false" class="nav-link" data-bs-target="#reports"
+                        data-bs-toggle="pill" id="reports-tab" role="tab" type="button">
+                        <i class="fas fa-chart-line me-2"></i><span data-lang="رپورٹس">رپورٹس</span>
+                    </a>
+                    <a aria-controls="settings" aria-selected="false" class="nav-link" data-bs-target="#settings"
+                        data-bs-toggle="pill" id="settings-tab" role="tab" type="button">
+                        <i class="fas fa-cog me-2"></i><span data-lang="سیٹنگز">سیٹنگز</span>
+                    </a>
+                    <a class="nav-link" href="#" id="logout-tab" onclick="logout()">
+                        <i class="fas fa-sign-out-alt me-2"></i><span data-lang="لاگ آؤٹ">لاگ آؤٹ</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="d-flex">
+        <div class="main-content flex-grow-1">
+            <div class="tab-content" id="v-pills-tabContent">
+                <div aria-labelledby="dashboard-tab" class="tab-pane fade show active" id="dashboard" role="tabpanel">
+                    <h2 class="mb-4" data-lang="ڈیش بورڈ">ڈیش بورڈ</h2>
+                    <div class="row">
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card bg-success text-white">
+                                <div class="card-body">
+                                    <h5 class="card-title" data-lang="عمومی فنڈ کا بیلنس">عمومی فنڈ کا بیلنس</h5>
+                                    <p class="card-text fs-3" id="generalFundBalance">۰.۰۰ روپیہ</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card bg-info text-white">
+                                <div class="card-body">
+                                    <h5 class="card-title" data-lang="زکوٰۃ فنڈ کا بیلنس">زکوٰۃ فنڈ کا بیلنس</h5>
+                                    <p class="card-text fs-3" id="zakatFundBalance">۰.۰۰ روپیہ</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card bg-primary text-white">
+                                <div class="card-body">
+                                    <h5 class="card-title" data-lang="کل آمدنی (اس مہینے)">کل آمدنی (اس مہینے)
                                     </h5>
-<p class="card-text fs-3" id="totalIncomeMonth">۰.۰۰ روپیہ</p>
-</div>
-</div>
-</div>
-<div class="col-md-6 col-lg-3">
-<div class="card bg-danger text-white">
-<div class="card-body">
-<h5 class="card-title" data-lang="کل اخراجات (اس مہینے)">کل اخراجات (اس مہینے)
+                                    <p class="card-text fs-3" id="totalIncomeMonth">۰.۰۰ روپیہ</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="card bg-danger text-white">
+                                <div class="card-body">
+                                    <h5 class="card-title" data-lang="کل اخراجات (اس مہینے)">کل اخراجات (اس مہینے)
                                     </h5>
-<p class="card-text fs-3" id="totalExpensesMonth">۰.۰۰ روپیہ</p>
-</div>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-lg-6">
-<div class="card">
-<div class="card-header" data-lang="اخراجات کی تقسیم بلحاظ مد (اس مہینے)">اخراجات کی
+                                    <p class="card-text fs-3" id="totalExpensesMonth">۰.۰۰ روپیہ</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header" data-lang="اخراجات کی تقسیم بلحاظ مد (اس مہینے)">اخراجات کی
                                     تقسیم بلحاظ مد (اس مہینے)</div>
-<div class="card-body">
-<div class="chart-container"><canvas id="expenseBreakdownChart"></canvas></div>
-</div>
-</div>
-</div>
-<div class="col-lg-6">
-<div class="card">
-<div class="card-header" data-lang="آمدنی بمقابلہ اخراجات کا رجحان (گزشتہ 6 ماہ)">آمدنی
+                                <div class="card-body">
+                                    <div class="chart-container"><canvas id="expenseBreakdownChart"></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header" data-lang="آمدنی بمقابلہ اخراجات کا رجحان (گزشتہ 6 ماہ)">آمدنی
                                     بمقابلہ اخراجات کا رجحان (گزشتہ 6 ماہ)</div>
-<div class="card-body">
-<div class="chart-container"><canvas id="incomeExpenseTrendChart"></canvas></div>
-</div>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-lg-6">
-<div class="card">
-<div class="card-header" data-lang="آنے والی بار بار کی ادائیگیاں (اگلے 30 دن)">آنے والی
+                                <div class="card-body">
+                                    <div class="chart-container"><canvas id="incomeExpenseTrendChart"></canvas></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header" data-lang="آنے والی بار بار کی ادائیگیاں (اگلے 30 دن)">آنے والی
                                     بار بار کی ادائیگیاں (اگلے 30 دن)</div>
-<div class="card-body">
-<ul class="list-group" id="upcomingRecurringList">
-<li class="list-group-item" data-lang="کوئی آنے والی ادائیگی نہیں ہے۔">کوئی آنے
+                                <div class="card-body">
+                                    <ul class="list-group" id="upcomingRecurringList">
+                                        <li class="list-group-item" data-lang="کوئی آنے والی ادائیگی نہیں ہے۔">کوئی آنے
                                             والی ادائیگی نہیں ہے۔</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col-lg-6">
-<div class="card">
-<div class="card-header" data-lang="اکثر دہرائی جانے والی ٹرانزیکشنز">اکثر دہرائی جانے
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card">
+                                <div class="card-header" data-lang="اکثر دہرائی جانے والی ٹرانزیکشنز">اکثر دہرائی جانے
                                     والی ٹرانزیکشنز</div>
-<div class="card-body">
-<ul class="list-group" id="frequentTransactionsList">
-<li class="list-group-item" data-lang="کوئی اکثر دہرائی جانے والی ٹرانزیکشن نہیں ہے۔">کوئی اکثر دہرائی
+                                <div class="card-body">
+                                    <ul class="list-group" id="frequentTransactionsList">
+                                        <li class="list-group-item"
+                                            data-lang="کوئی اکثر دہرائی جانے والی ٹرانزیکشن نہیں ہے۔">کوئی اکثر دہرائی
                                             جانے والی ٹرانزیکشن نہیں ہے۔</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div aria-labelledby="transactions-tab" class="tab-pane fade" id="transactions" role="tabpanel">
-<h2 class="mb-4" data-lang="ٹرانزیکشن مینجمنٹ">ٹرانزیکشن مینجمنٹ</h2>
-<div class="card mb-4">
-<div class="card-body">
-<button class="btn btn-primary float-end" data-bs-target="#addTransactionModal" data-bs-toggle="modal" data-lang="نئی ٹرانزیکشن شامل کریں">نئی ٹرانزیکشن شامل
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div aria-labelledby="transactions-tab" class="tab-pane fade" id="transactions" role="tabpanel">
+                    <h2 class="mb-4" data-lang="ٹرانزیکشن مینجمنٹ">ٹرانزیکشن مینجمنٹ</h2>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <button class="btn btn-primary float-end" data-bs-target="#addTransactionModal"
+                                data-bs-toggle="modal" data-lang="نئی ٹرانزیکشن شامل کریں">نئی ٹرانزیکشن شامل
                                 کریں</button>
-<h5 class="card-title mb-3" data-lang="ٹرانزیکشنز کو فلٹر کریں">ٹرانزیکشنز کو فلٹر کریں
+                            <h5 class="card-title mb-3" data-lang="ٹرانزیکشنز کو فلٹر کریں">ٹرانزیکشنز کو فلٹر کریں
                             </h5>
-<div class="row g-3">
-<div class="col-md-3">
-<label class="form-label" data-lang="تاریخ سے" for="filterDateFrom">تاریخ
+                            <div class="row g-3">
+                                <div class="col-md-3">
+                                    <label class="form-label" data-lang="تاریخ سے" for="filterDateFrom">تاریخ
                                         سے</label>
-<input class="form-control" id="filterDateFrom" type="date"/>
-</div>
-<div class="col-md-3">
-<label class="form-label" data-lang="تاریخ تک" for="filterDateTo">تاریخ تک</label>
-<input class="form-control" id="filterDateTo" type="date"/>
-</div>
-<div class="col-md-2">
-<label class="form-label" data-lang="قسم" for="filterType">قسم</label>
-<select class="form-select" id="filterType">
-<option data-lang="تمام" value="">تمام</option>
-<option data-lang="آمدنی" value="income">آمدنی</option>
-<option data-lang="اخراجات" value="expense">اخراجات</option>
-</select>
-</div>
-<div class="col-md-2">
-<label class="form-label" data-lang="مد" for="filterGroup">مد</label>
-<select class="form-select" id="filterGroup"></select>
-</div>
-<div class="col-md-3">
-<label class="form-label" data-lang="فنڈ کی قسم" for="filterFundType">فنڈ کی
+                                    <input class="form-control" id="filterDateFrom" type="date" />
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label" data-lang="تاریخ تک" for="filterDateTo">تاریخ تک</label>
+                                    <input class="form-control" id="filterDateTo" type="date" />
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="form-label" data-lang="قسم" for="filterType">قسم</label>
+                                    <select class="form-select" id="filterType">
+                                        <option data-lang="تمام" value="">تمام</option>
+                                        <option data-lang="آمدنی" value="income">آمدنی</option>
+                                        <option data-lang="اخراجات" value="expense">اخراجات</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="form-label" data-lang="مد" for="filterGroup">مد</label>
+                                    <select class="form-select" id="filterGroup"></select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label" data-lang="فنڈ کی قسم" for="filterFundType">فنڈ کی
                                         قسم</label>
-<select class="form-select" id="filterFundType">
-<option data-lang="تمام" value="">تمام</option>
-</select>
-</div>
-<div class="col-md-3">
-<label class="form-label" data-lang="دینے والا/وصول کنندہ" for="filterPayerPayee">دینے
+                                    <select class="form-select" id="filterFundType">
+                                        <option data-lang="تمام" value="">تمام</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label" data-lang="دینے والا/وصول کنندہ"
+                                        for="filterPayerPayee">دینے
                                         والا/وصول کنندہ</label>
-<input class="form-control" id="filterPayerPayee" type="text"/>
-</div>
-<div class="col-md-3">
-<label class="form-label" data-lang="نوٹس" for="filterNotes">نوٹس</label>
-<input class="form-control" id="filterNotes" type="text"/>
-</div>
-<div class="col-12 text-start">
-<button class="btn btn-primary" data-lang="فلٹر لگائیں" id="applyFilterBtn">فلٹر
+                                    <input class="form-control" id="filterPayerPayee" type="text" />
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label" data-lang="نوٹس" for="filterNotes">نوٹس</label>
+                                    <input class="form-control" id="filterNotes" type="text" />
+                                </div>
+                                <div class="col-12 text-start">
+                                    <button class="btn btn-primary" data-lang="فلٹر لگائیں" id="applyFilterBtn">فلٹر
                                         لگائیں</button>
-<button class="btn btn-secondary" data-lang="فلٹر ری سیٹ کریں" id="resetFilterBtn">فلٹر
+                                    <button class="btn btn-secondary" data-lang="فلٹر ری سیٹ کریں"
+                                        id="resetFilterBtn">فلٹر
                                         ری سیٹ کریں</button>
-</div>
-</div>
-</div>
-</div>
-<div class="card">
-<div class="card-header" data-lang="ٹرانزیکشن کی فہرست">ٹرانزیکشن کی فہرست</div>
-<div class="card-body">
-<div class="table-responsive">
-<table class="table table-striped table-hover">
-<thead>
-<tr>
-<th data-lang="ID">ID</th>
-<th data-lang="تاریخ">تاریخ</th>
-<th data-lang="قسم">قسم</th>
-<th data-lang="رقم">رقم</th>
-<th data-lang="فنڈ کی قسم">فنڈ کی قسم</th>
-<th data-lang="مد">مد</th>
-<th data-lang="دینے والا/وصول کنندہ">دینے والا/وصول کنندہ</th>
-<th data-lang="نوٹس">نوٹس</th>
-<th data-lang="کارروائیاں">کارروائیاں</th>
-</tr>
-</thead>
-<tbody id="transactionsTableBody">
-</tbody>
-</table>
-</div>
-<nav aria-label="Page navigation">
-<ul class="pagination justify-content-center" id="transactionsPagination"></ul>
-</nav>
-</div>
-</div>
-</div>
-<div aria-labelledby="organization-tab" class="tab-pane fade" id="financial-organization" role="tabpanel">
-<h2 class="mb-4" data-lang="مدرسہ کے مالیاتی شعبے">مدرسہ کے مالیاتی شعبے</h2>
-<div class="card mb-4">
-<div class="card-body">
-<h5 class="card-title" data-lang="مد شامل کریں/ترمیم کریں">مد شامل کریں/ترمیم کریں</h5>
-<form id="groupForm">
-<input id="groupId" type="hidden"/>
-<div class="mb-3">
-<label class="form-label" data-lang="مد کا نام" for="groupName">مد کا
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" data-lang="ٹرانزیکشن کی فہرست">ٹرانزیکشن کی فہرست</div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th data-lang="ID">ID</th>
+                                            <th data-lang="تاریخ">تاریخ</th>
+                                            <th data-lang="قسم">قسم</th>
+                                            <th data-lang="رقم">رقم</th>
+                                            <th data-lang="فنڈ کی قسم">فنڈ کی قسم</th>
+                                            <th data-lang="مد">مد</th>
+                                            <th data-lang="دینے والا/وصول کنندہ">دینے والا/وصول کنندہ</th>
+                                            <th data-lang="نوٹس">نوٹس</th>
+                                            <th data-lang="کارروائیاں">کارروائیاں</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="transactionsTableBody">
+                                    </tbody>
+                                </table>
+                            </div>
+                            <nav aria-label="Page navigation">
+                                <ul class="pagination justify-content-center" id="transactionsPagination"></ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                <div aria-labelledby="organization-tab" class="tab-pane fade" id="financial-organization"
+                    role="tabpanel">
+                    <h2 class="mb-4" data-lang="مدرسہ کے مالیاتی شعبے">مدرسہ کے مالیاتی شعبے</h2>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title" data-lang="مد شامل کریں/ترمیم کریں">مد شامل کریں/ترمیم کریں</h5>
+                            <form id="groupForm">
+                                <input id="groupId" type="hidden" />
+                                <div class="mb-3">
+                                    <label class="form-label" data-lang="مد کا نام" for="groupName">مد کا
                                         نام</label>
-<input class="form-control" id="groupName" required="" type="text"/>
-</div>
-<div class="mb-3">
-<label class="form-label" data-lang="قسم" for="groupType">قسم</label>
-<select class="form-select" id="groupType" required="">
-<option data-lang="قسم منتخب کریں" value="">قسم منتخب کریں</option>
-<option data-lang="آمدنی" value="income">آمدنی</option>
-<option data-lang="اخراجات" value="expense">اخراجات</option>
-<option data-lang="آمدنی اور اخراجات دونوں" value="both">آمدنی اور اخراجات
+                                    <input class="form-control" id="groupName" required="" type="text" />
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" data-lang="قسم" for="groupType">قسم</label>
+                                    <select class="form-select" id="groupType" required="">
+                                        <option data-lang="قسم منتخب کریں" value="">قسم منتخب کریں</option>
+                                        <option data-lang="آمدنی" value="income">آمدنی</option>
+                                        <option data-lang="اخراجات" value="expense">اخراجات</option>
+                                        <option data-lang="آمدنی اور اخراجات دونوں" value="both">آمدنی اور اخراجات
                                             دونوں</option>
-</select>
-</div>
-<div class="mb-3">
-<label class="form-label" data-lang="فنڈ کی قسم" for="groupFundType">فنڈ کی
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" data-lang="فنڈ کی قسم" for="groupFundType">فنڈ کی
                                         قسم (اس مد کے لیے)</label>
-<select class="form-select" id="groupFundType" required="">
-<option data-lang="فنڈ کی قسم منتخب کریں" value="">فنڈ کی قسم منتخب کریں
+                                    <select class="form-select" id="groupFundType" required="">
+                                        <option data-lang="فنڈ کی قسم منتخب کریں" value="">فنڈ کی قسم منتخب کریں
                                         </option>
-</select>
-</div>
-<div class="mb-3">
-<label class="form-label" data-lang="تفصیل" for="groupDescription">تفصیل</label>
-<textarea class="form-control" id="groupDescription" rows="3"></textarea>
-</div>
-<button class="btn btn-primary" data-lang="مد محفوظ کریں" type="submit">مد محفوظ
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" data-lang="تفصیل" for="groupDescription">تفصیل</label>
+                                    <textarea class="form-control" id="groupDescription" rows="3"></textarea>
+                                </div>
+                                <button class="btn btn-primary" data-lang="مد محفوظ کریں" type="submit">مد محفوظ
                                     کریں</button>
-<button class="btn btn-secondary" data-lang="منسوخ کریں" id="cancelGroupEdit" style="display:none;" type="button">منسوخ کریں</button>
-</form>
-</div>
-</div>
-<div class="card">
-<div class="card-header" data-lang="موجودہ مدات">موجودہ مدات</div>
-<div class="card-body">
-<div class="table-responsive">
-<table class="table table-striped">
-<thead>
-<tr>
-<th data-lang="ID">ID</th>
-<th data-lang="نام">نام</th>
-<th data-lang="قسم">قسم</th>
-<th data-lang="فنڈ کی قسم">فنڈ کی قسم</th>
-<th data-lang="تفصیل">تفصیل</th>
-<th data-lang="کارروائیاں">کارروائیاں</th>
-</tr>
-</thead>
-<tbody id="groupsTableBody"></tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-<div aria-labelledby="group-detail-tab" class="tab-pane fade" id="group-detail-view" role="tabpanel">
-<div class="card group-detail-view">
-<div class="card-header">
-<h2 class="mb-0" id="groupDetailName"></h2>
-<div>
-<button class="btn btn-sm btn-info print-group-transactions-btn" data-lang="پرنٹ کریں"><i class="fas fa-print me-1"></i>پرنٹ کریں</button>
-<button class="btn btn-sm btn-info" data-lang="مدات پر واپس جائیں" onclick="activateTab('financial-organization')">
+                                <button class="btn btn-secondary" data-lang="منسوخ کریں" id="cancelGroupEdit"
+                                    style="display:none;" type="button">منسوخ کریں</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" data-lang="موجودہ مدات">موجودہ مدات</div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th data-lang="ID">ID</th>
+                                            <th data-lang="نام">نام</th>
+                                            <th data-lang="قسم">قسم</th>
+                                            <th data-lang="فنڈ کی قسم">فنڈ کی قسم</th>
+                                            <th data-lang="تفصیل">تفصیل</th>
+                                            <th data-lang="کارروائیاں">کارروائیاں</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="groupsTableBody"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div aria-labelledby="group-detail-tab" class="tab-pane fade" id="group-detail-view" role="tabpanel">
+                    <div class="card group-detail-view">
+                        <div class="card-header">
+                            <h2 class="mb-0" id="groupDetailName"></h2>
+                            <div>
+                                <button class="btn btn-sm btn-info print-group-transactions-btn"
+                                    data-lang="پرنٹ کریں"><i class="fas fa-print me-1"></i>پرنٹ کریں</button>
+                                <button class="btn btn-sm btn-info" data-lang="مدات پر واپس جائیں"
+                                    onclick="activateTab('financial-organization')">
                                     مدات پر واپس جائیں</button>
-</div>
-</div>
-<div class="card-body">
-<p><span data-lang="مد کی قسم">مد کی قسم</span>: <span id="groupDetailType"></span></p>
-<p><span data-lang="مد کی فنڈ کی قسم">مد کی فنڈ کی قسم</span>: <span id="groupDetailFundType"></span></p>
-<p><span data-lang="مد کی تفصیل">مد کی تفصیل</span>: <span id="groupDetailDescription"></span></p>
-<hr/>
-<h5 class="card-title mb-3" data-lang="مد میں ٹرانزیکشن شامل کریں">مد میں ٹرانزیکشن شامل
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p><span data-lang="مد کی قسم">مد کی قسم</span>: <span id="groupDetailType"></span></p>
+                            <p><span data-lang="مد کی فنڈ کی قسم">مد کی فنڈ کی قسم</span>: <span
+                                    id="groupDetailFundType"></span></p>
+                            <p><span data-lang="مد کی تفصیل">مد کی تفصیل</span>: <span
+                                    id="groupDetailDescription"></span></p>
+                            <hr />
+                            <h5 class="card-title mb-3" data-lang="مد میں ٹرانزیکشن شامل کریں">مد میں ٹرانزیکشن شامل
                                 کریں</h5>
-<form class="row g-3" id="groupTransactionForm">
-<input id="groupTransactionGroupId" type="hidden"/>
-<div class="col-md-3">
-<label class="form-label" data-lang="قسم" for="groupTransactionType">قسم</label>
-<select class="form-select" id="groupTransactionType" required="">
-<option data-lang="قسم منتخب کریں" value="">قسم منتخب کریں</option>
-<option data-lang="آمدنی" value="income">آمدنی</option>
-<option data-lang="اخراجات" value="expense">اخراجات</option>
-</select>
-</div>
-<div class="col-md-3">
-<label class="form-label" data-lang="رقم" for="groupTransactionAmount">رقم</label>
-<input class="form-control" id="groupTransactionAmount" required="" step="0.01" type="number"/>
-</div>
-<div class="col-md-6">
-<label class="form-label" data-lang="دینے والا/وصول کنندہ" for="groupTransactionPayerPayee">دینے والا/وصول
+                            <form class="row g-3" id="groupTransactionForm">
+                                <input id="groupTransactionGroupId" type="hidden" />
+                                <div class="col-md-3">
+                                    <label class="form-label" data-lang="قسم" for="groupTransactionType">قسم</label>
+                                    <select class="form-select" id="groupTransactionType" required="">
+                                        <option data-lang="قسم منتخب کریں" value="">قسم منتخب کریں</option>
+                                        <option data-lang="آمدنی" value="income">آمدنی</option>
+                                        <option data-lang="اخراجات" value="expense">اخراجات</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label" data-lang="رقم" for="groupTransactionAmount">رقم</label>
+                                    <input class="form-control" id="groupTransactionAmount" required="" step="0.01"
+                                        type="number" />
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" data-lang="دینے والا/وصول کنندہ"
+                                        for="groupTransactionPayerPayee">دینے والا/وصول
                                         کنندہ</label>
-<input class="form-control" id="groupTransactionPayerPayee" type="text"/>
-</div>
-<div class="col-md-6">
-<label class="form-label" for="groupTransactionAddress">پتہ</label>
-<input class="form-control" id="groupTransactionAddress" type="text"/>
-</div>
-<div class="col-12">
-<label class="form-label" data-lang="نوٹس" for="groupTransactionNotes">نوٹس</label>
-<textarea class="form-control" id="groupTransactionNotes" rows="1"></textarea>
-</div>
-<div class="col-12 text-start">
-<button class="btn btn-primary" data-lang="ٹرانزیکشن شامل کریں" type="submit">ٹرانزیکشن
+                                    <input class="form-control" id="groupTransactionPayerPayee" type="text" />
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label" for="groupTransactionAddress">پتہ</label>
+                                    <input class="form-control" id="groupTransactionAddress" type="text" />
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label" data-lang="نوٹس" for="groupTransactionNotes">نوٹس</label>
+                                    <textarea class="form-control" id="groupTransactionNotes" rows="1"></textarea>
+                                </div>
+                                <div class="col-12 text-start">
+                                    <button class="btn btn-primary" data-lang="ٹرانزیکشن شامل کریں"
+                                        type="submit">ٹرانزیکشن
                                         شامل کریں</button>
-</div>
-</form>
-<hr/>
-<h5 class="card-title mb-3" data-lang="اس مد میں ٹرانزیکشنز">اس مد میں ٹرانزیکشنز
+                                </div>
+                            </form>
+                            <hr />
+                            <h5 class="card-title mb-3" data-lang="اس مد میں ٹرانزیکشنز">اس مد میں ٹرانزیکشنز
                             </h5>
-<div class="table-responsive">
-<table class="table table-striped table-hover">
-<thead>
-<tr>
-<th data-lang="ID">ID</th>
-<th data-lang="تاریخ">تاریخ</th>
-<th data-lang="قسم">قسم</th>
-<th data-lang="رقم">رقم</th>
-<th data-lang="نوٹس">نوٹس</th>
-<th data-lang="دینے والا/وصول کنندہ">دینے والا/وصول کنندہ</th>
-<th data-lang="کارروائیاں">کارروائیاں</th>
-</tr>
-</thead>
-<tbody id="groupTransactionsTableBody">
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-<div aria-labelledby="planning-tab" class="tab-pane fade" id="planning-forecasting" role="tabpanel">
-<h2 class="mb-4" data-lang="منصوبہ بندی">منصوبہ بندی</h2>
-<ul class="nav nav-tabs mb-4" id="planningTabs" role="tablist">
-<li class="nav-item" role="presentation">
-<button aria-controls="recurring-transactions" aria-selected="false" class="nav-link active" data-bs-target="#recurring-transactions" data-bs-toggle="tab" data-lang="بار بار کی ٹرانزیکشنز" id="recurring-transactions-tab" role="tab" type="button">بار بار کی
+                            <div class="table-responsive">
+                                <table class="table table-striped table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th data-lang="ID">ID</th>
+                                            <th data-lang="تاریخ">تاریخ</th>
+                                            <th data-lang="قسم">قسم</th>
+                                            <th data-lang="رقم">رقم</th>
+                                            <th data-lang="نوٹس">نوٹس</th>
+                                            <th data-lang="دینے والا/وصول کنندہ">دینے والا/وصول کنندہ</th>
+                                            <th data-lang="کارروائیاں">کارروائیاں</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="groupTransactionsTableBody">
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div aria-labelledby="planning-tab" class="tab-pane fade" id="planning-forecasting" role="tabpanel">
+                    <h2 class="mb-4" data-lang="منصوبہ بندی">منصوبہ بندی</h2>
+                    <ul class="nav nav-tabs mb-4" id="planningTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button aria-controls="recurring-transactions" aria-selected="false" class="nav-link active"
+                                data-bs-target="#recurring-transactions" data-bs-toggle="tab"
+                                data-lang="بار بار کی ٹرانزیکشنز" id="recurring-transactions-tab" role="tab"
+                                type="button">بار بار کی
                                 ٹرانزیکشنز</button>
-</li>
-<li class="nav-item" role="presentation">
-<button aria-controls="fund-goals" aria-selected="false" class="nav-link" data-bs-target="#fund-goals" data-bs-toggle="tab" data-lang="فنڈ کے اہداف" id="fund-goals-tab" role="tab" type="button">فنڈ کے اہداف</button>
-</li>
-</ul>
-<div class="tab-content">
-<div aria-labelledby="recurring-transactions-tab" class="tab-pane fade show active" id="recurring-transactions" role="tabpanel">
-<div class="card mb-4">
-<div class="card-body">
-<h5 class="card-title" data-lang="بار بار کی ٹرانزیکشن شامل کریں/ترمیم کریں">بار بار
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button aria-controls="fund-goals" aria-selected="false" class="nav-link"
+                                data-bs-target="#fund-goals" data-bs-toggle="tab" data-lang="فنڈ کے اہداف"
+                                id="fund-goals-tab" role="tab" type="button">فنڈ کے اہداف</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div aria-labelledby="recurring-transactions-tab" class="tab-pane fade show active"
+                            id="recurring-transactions" role="tabpanel">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h5 class="card-title" data-lang="بار بار کی ٹرانزیکشن شامل کریں/ترمیم کریں">بار بار
                                         کی
                                         ٹرانزیکشن شامل کریں/ترمیم کریں</h5>
-<form id="recurringTransactionForm">
-<input id="recurringTransactionId" type="hidden"/>
-<div class="mb-3">
-<label class="form-label" data-lang="قسم" for="recurringType">قسم</label>
-<select class="form-select" id="recurringType" required="">
-<option data-lang="قسم منتخب کریں" value="">قسم منتخب کریں</option>
-<option data-lang="آمدنی" value="income">آمدنی</option>
-<option data-lang="اخراجات" value="expense">اخراجات</option>
-</select>
-</div>
-<div class="mb-3">
-<label class="form-label" data-lang="رقم" for="recurringAmount">رقم</label>
-<input class="form-control" id="recurringAmount" required="" step="0.01" type="number"/>
-</div>
-<div class="mb-3">
-<label class="form-label" data-lang="تعدد" for="recurringFrequency">تعدد</label>
-<select class="form-select" id="recurringFrequency" required="">
-<option data-lang="تعدد منتخب کریں" value="">تعدد منتخب کریں</option>
-<option data-lang="ماہانہ" value="monthly">ماہانہ</option>
-<option data-lang="سہ ماہی" value="quarterly">سہ ماہی</option>
-<option data-lang="سالانہ" value="yearly">سالانہ</option>
-</select>
-</div>
-<div class="mb-3">
-<label class="form-label" data-lang="اگلی مقررہ تاریخ" for="recurringNextDueDate">اگلی مقررہ
+                                    <form id="recurringTransactionForm">
+                                        <input id="recurringTransactionId" type="hidden" />
+                                        <div class="mb-3">
+                                            <label class="form-label" data-lang="قسم" for="recurringType">قسم</label>
+                                            <select class="form-select" id="recurringType" required="">
+                                                <option data-lang="قسم منتخب کریں" value="">قسم منتخب کریں</option>
+                                                <option data-lang="آمدنی" value="income">آمدنی</option>
+                                                <option data-lang="اخراجات" value="expense">اخراجات</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" data-lang="رقم" for="recurringAmount">رقم</label>
+                                            <input class="form-control" id="recurringAmount" required="" step="0.01"
+                                                type="number" />
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" data-lang="تعدد"
+                                                for="recurringFrequency">تعدد</label>
+                                            <select class="form-select" id="recurringFrequency" required="">
+                                                <option data-lang="تعدد منتخب کریں" value="">تعدد منتخب کریں</option>
+                                                <option data-lang="ماہانہ" value="monthly">ماہانہ</option>
+                                                <option data-lang="سہ ماہی" value="quarterly">سہ ماہی</option>
+                                                <option data-lang="سالانہ" value="yearly">سالانہ</option>
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" data-lang="اگلی مقررہ تاریخ"
+                                                for="recurringNextDueDate">اگلی مقررہ
                                                 تاریخ</label>
-<input class="form-control" id="recurringNextDueDate" required="" type="date"/>
-</div>
-<div class="mb-3">
-<label class="form-label" data-lang="مد" for="recurringGroup">مد</label>
-<select class="form-select" id="recurringGroup" required=""></select>
-</div>
-<div class="mb-3">
-<label class="form-label" data-lang="نوٹس" for="recurringNotes">نوٹس</label>
-<textarea class="form-control" id="recurringNotes" rows="3"></textarea>
-</div>
-<button class="btn btn-primary" data-lang="بار بار کی ٹرانزیکشن محفوظ کریں" type="submit">بار بار کی ٹرانزیکشن محفوظ
+                                            <input class="form-control" id="recurringNextDueDate" required=""
+                                                type="date" />
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" data-lang="مد" for="recurringGroup">مد</label>
+                                            <select class="form-select" id="recurringGroup" required=""></select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" data-lang="نوٹس" for="recurringNotes">نوٹس</label>
+                                            <textarea class="form-control" id="recurringNotes" rows="3"></textarea>
+                                        </div>
+                                        <button class="btn btn-primary" data-lang="بار بار کی ٹرانزیکشن محفوظ کریں"
+                                            type="submit">بار بار کی ٹرانزیکشن محفوظ
                                             کریں</button>
-<button class="btn btn-secondary" data-lang="منسوخ کریں" id="cancelRecurringEdit" style="display:none;" type="button">منسوخ کریں</button>
-</form>
-</div>
-</div>
-<div class="card">
-<div class="card-header" data-lang="موجودہ بار بار کی ٹرانزیکشنز">موجودہ بار بار کی
+                                        <button class="btn btn-secondary" data-lang="منسوخ کریں"
+                                            id="cancelRecurringEdit" style="display:none;" type="button">منسوخ
+                                            کریں</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" data-lang="موجودہ بار بار کی ٹرانزیکشنز">موجودہ بار بار کی
                                     ٹرانزیکشنز</div>
-<div class="card-body">
-<div class="table-responsive">
-<table class="table table-striped">
-<thead>
-<tr>
-<th data-lang="ID">ID</th>
-<th data-lang="قسم">قسم</th>
-<th data-lang="رقم">رقم</th>
-<th data-lang="تعدد">تعدد</th>
-<th data-lang="اگلی مقررہ تاریخ">اگلی مقررہ تاریخ</th>
-<th data-lang="مد">مد</th>
-<th data-lang="نوٹس">نوٹس</th>
-<th data-lang="کارروائیاں">کارروائیاں</th>
-</tr>
-</thead>
-<tbody id="recurringTransactionsTableBody"></tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-<div aria-labelledby="fund-goals-tab" class="tab-pane fade" id="fund-goals" role="tabpanel">
-<div class="card mb-4">
-<div class="card-body">
-<h5 class="card-title" data-lang="فنڈ کا ہدف مقرر کریں">فنڈ کا ہدف مقرر کریں</h5>
-<form id="fundGoalForm">
-<input id="fundGoalId" type="hidden"/>
-<div class="mb-3">
-<label class="form-label" data-lang="فنڈ کی قسم" for="fundGoalType">فنڈ کی
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th data-lang="ID">ID</th>
+                                                    <th data-lang="قسم">قسم</th>
+                                                    <th data-lang="رقم">رقم</th>
+                                                    <th data-lang="تعدد">تعدد</th>
+                                                    <th data-lang="اگلی مقررہ تاریخ">اگلی مقررہ تاریخ</th>
+                                                    <th data-lang="مد">مد</th>
+                                                    <th data-lang="نوٹس">نوٹس</th>
+                                                    <th data-lang="کارروائیاں">کارروائیاں</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="recurringTransactionsTableBody"></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div aria-labelledby="fund-goals-tab" class="tab-pane fade" id="fund-goals" role="tabpanel">
+                            <div class="card mb-4">
+                                <div class="card-body">
+                                    <h5 class="card-title" data-lang="فنڈ کا ہدف مقرر کریں">فنڈ کا ہدف مقرر کریں</h5>
+                                    <form id="fundGoalForm">
+                                        <input id="fundGoalId" type="hidden" />
+                                        <div class="mb-3">
+                                            <label class="form-label" data-lang="فنڈ کی قسم" for="fundGoalType">فنڈ کی
                                                 قسم</label>
-<select class="form-select" id="fundGoalType" required="">
-<option data-lang="فنڈ کی قسم منتخب کریں" value="">فنڈ کی قسم منتخب کریں
+                                            <select class="form-select" id="fundGoalType" required="">
+                                                <option data-lang="فنڈ کی قسم منتخب کریں" value="">فنڈ کی قسم منتخب کریں
                                                 </option>
-</select>
-</div>
-<div class="mb-3">
-<label class="form-label" data-lang="ہدف کی رقم" for="fundGoalAmount">ہدف کی
+                                            </select>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" data-lang="ہدف کی رقم" for="fundGoalAmount">ہدف کی
                                                 رقم</label>
-<input class="form-control" id="fundGoalAmount" required="" step="0.01" type="number"/>
-</div>
-<div class="mb-3">
-<label class="form-label" data-lang="تفصیل" for="fundGoalDescription">تفصیل</label>
-<textarea class="form-control" id="fundGoalDescription" rows="3"></textarea>
-</div>
-<button class="btn btn-primary" data-lang="ہدف محفوظ کریں" type="submit">ہدف
+                                            <input class="form-control" id="fundGoalAmount" required="" step="0.01"
+                                                type="number" />
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" data-lang="تفصیل"
+                                                for="fundGoalDescription">تفصیل</label>
+                                            <textarea class="form-control" id="fundGoalDescription" rows="3"></textarea>
+                                        </div>
+                                        <button class="btn btn-primary" data-lang="ہدف محفوظ کریں" type="submit">ہدف
                                             محفوظ کریں</button>
-<button class="btn btn-secondary" data-lang="منسوخ کریں" id="cancelFundGoalEdit" style="display:none;" type="button">منسوخ کریں</button>
-</form>
-</div>
-</div>
-<div class="card">
-<div class="card-header" data-lang="موجودہ فنڈ اہداف">موجودہ فنڈ اہداف</div>
-<div class="card-body">
-<div class="table-responsive">
-<table class="table table-striped">
-<thead>
-<tr>
-<th data-lang="ID">ID</th>
-<th data-lang="فنڈ کی قسم">فنڈ کی قسم</th>
-<th data-lang="ہدف کی رقم">ہدف کی رقم</th>
-<th data-lang="تفصیل">تفصیل</th>
-<th data-lang="کارروائیاں">کارروائیاں</th>
-</tr>
-</thead>
-<tbody id="fundGoalsTableBody"></tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div aria-labelledby="reports-tab" class="tab-pane fade" id="reports" role="tabpanel">
-<h2 class="mb-4" data-lang="رپورٹس">رپورٹس</h2>
-<ul class="nav nav-tabs mb-4" id="reportTabs" role="tablist">
-<li class="nav-item" role="presentation">
-<button aria-controls="daily-ledger-report" aria-selected="false" class="nav-link active" data-bs-target="#daily-ledger-report" data-bs-toggle="tab" data-lang="روزانہ لیجر" id="daily-ledger-report-tab" role="tab" type="button">روزانہ لیجر</button>
-</li>
-<li class="nav-item" role="presentation">
-<button aria-controls="date-range-details-report" aria-selected="false" class="nav-link" data-bs-target="#date-range-details-report" data-bs-toggle="tab" data-lang="تاریخی حدود کی تفصیلات" id="date-range-details-report-tab" role="tab" type="button">تاریخی حدود کی
+                                        <button class="btn btn-secondary" data-lang="منسوخ کریں" id="cancelFundGoalEdit"
+                                            style="display:none;" type="button">منسوخ کریں</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" data-lang="موجودہ فنڈ اہداف">موجودہ فنڈ اہداف</div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th data-lang="ID">ID</th>
+                                                    <th data-lang="فنڈ کی قسم">فنڈ کی قسم</th>
+                                                    <th data-lang="ہدف کی رقم">ہدف کی رقم</th>
+                                                    <th data-lang="تفصیل">تفصیل</th>
+                                                    <th data-lang="کارروائیاں">کارروائیاں</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="fundGoalsTableBody"></tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div aria-labelledby="reports-tab" class="tab-pane fade" id="reports" role="tabpanel">
+                    <h2 class="mb-4" data-lang="رپورٹس">رپورٹس</h2>
+                    <ul class="nav nav-tabs mb-4" id="reportTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button aria-controls="daily-ledger-report" aria-selected="false" class="nav-link active"
+                                data-bs-target="#daily-ledger-report" data-bs-toggle="tab" data-lang="روزانہ لیجر"
+                                id="daily-ledger-report-tab" role="tab" type="button">روزانہ لیجر</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button aria-controls="date-range-details-report" aria-selected="false" class="nav-link"
+                                data-bs-target="#date-range-details-report" data-bs-toggle="tab"
+                                data-lang="تاریخی حدود کی تفصیلات" id="date-range-details-report-tab" role="tab"
+                                type="button">تاریخی حدود کی
                                 تفصیلات</button>
-</li>
-<li class="nav-item" role="presentation">
-<button aria-controls="monthly-summary-report" aria-selected="false" class="nav-link" data-bs-target="#monthly-summary-report" data-bs-toggle="tab" data-lang="ماہانہ خلاصہ" id="monthly-summary-report-tab" role="tab" type="button">ماہانہ
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button aria-controls="monthly-summary-report" aria-selected="false" class="nav-link"
+                                data-bs-target="#monthly-summary-report" data-bs-toggle="tab" data-lang="ماہانہ خلاصہ"
+                                id="monthly-summary-report-tab" role="tab" type="button">ماہانہ
                                 خلاصہ</button>
-</li>
-<li class="nav-item" role="presentation">
-<button aria-controls="yearly-summary-report" aria-selected="false" class="nav-link" data-bs-target="#yearly-summary-report" data-bs-toggle="tab" data-lang="سالانہ خلاصہ" id="yearly-summary-report-tab" role="tab" type="button">سالانہ
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button aria-controls="yearly-summary-report" aria-selected="false" class="nav-link"
+                                data-bs-target="#yearly-summary-report" data-bs-toggle="tab" data-lang="سالانہ خلاصہ"
+                                id="yearly-summary-report-tab" role="tab" type="button">سالانہ
                                 خلاصہ</button>
-</li>
-<li class="nav-item" role="presentation">
-<button aria-controls="group-wise-report" aria-selected="false" class="nav-link" data-bs-target="#group-wise-report" data-bs-toggle="tab" data-lang="مد وار رپورٹ" id="group-wise-report-tab" role="tab" type="button">مد وار رپورٹ</button>
-</li>
-<li class="nav-item" role="presentation">
-<button aria-controls="fund-balance-report" aria-selected="false" class="nav-link" data-bs-target="#fund-balance-report" data-bs-toggle="tab" data-lang="فنڈ بیلنس رپورٹ" id="fund-balance-report-tab" role="tab" type="button">فنڈ بیلنس رپورٹ</button>
-</li>
-<li class="nav-item" role="presentation">
-<button aria-controls="zakat-report" aria-selected="false" class="nav-link" data-bs-target="#zakat-report" data-bs-toggle="tab" data-lang="زکوٰۃ رپورٹ" id="zakat-report-tab" role="tab" type="button">زکوٰۃ رپورٹ</button>
-</li>
-</ul>
-<div class="card mb-4">
-<div class="card-body">
-<h5 class="card-title" data-lang="رپورٹ کے فلٹرز">رپورٹ کے فلٹرز</h5>
-<div class="row g-3">
-<div class="col-md-3">
-<label class="form-label" data-lang="تاریخ سے" for="reportDateFrom">تاریخ
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button aria-controls="group-wise-report" aria-selected="false" class="nav-link"
+                                data-bs-target="#group-wise-report" data-bs-toggle="tab" data-lang="مد وار رپورٹ"
+                                id="group-wise-report-tab" role="tab" type="button">مد وار رپورٹ</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button aria-controls="fund-balance-report" aria-selected="false" class="nav-link"
+                                data-bs-target="#fund-balance-report" data-bs-toggle="tab" data-lang="فنڈ بیلنس رپورٹ"
+                                id="fund-balance-report-tab" role="tab" type="button">فنڈ بیلنس رپورٹ</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button aria-controls="zakat-report" aria-selected="false" class="nav-link"
+                                data-bs-target="#zakat-report" data-bs-toggle="tab" data-lang="زکوٰۃ رپورٹ"
+                                id="zakat-report-tab" role="tab" type="button">زکوٰۃ رپورٹ</button>
+                        </li>
+                    </ul>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title" data-lang="رپورٹ کے فلٹرز">رپورٹ کے فلٹرز</h5>
+                            <div class="row g-3">
+                                <div class="col-md-3">
+                                    <label class="form-label" data-lang="تاریخ سے" for="reportDateFrom">تاریخ
                                         سے</label>
-<input class="form-control" id="reportDateFrom" type="date"/>
-</div>
-<div class="col-md-3">
-<label class="form-label" data-lang="تاریخ تک" for="reportDateTo">تاریخ
+                                    <input class="form-control" id="reportDateFrom" type="date" />
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label" data-lang="تاریخ تک" for="reportDateTo">تاریخ
                                         تک</label>
-<input class="form-control" id="reportDateTo" type="date"/>
-</div>
-<div class="col-md-3">
-<label class="form-label" data-lang="قسم" for="reportType">قسم</label>
-<select class="form-select" id="reportType">
-<option data-lang="تمام" value="">تمام</option>
-<option data-lang="آمدنی" value="income">آمدنی</option>
-<option data-lang="اخراجات" value="expense">اخراجات</option>
-</select>
-</div>
-<div class="col-md-3">
-<label class="form-label" data-lang="مد" for="reportGroup">مد</label>
-<select class="form-select" id="reportGroup"></select>
-</div>
-<div class="col-md-3">
-<label class="form-label" data-lang="فنڈ کی قسم" for="reportFundType">فنڈ کی
+                                    <input class="form-control" id="reportDateTo" type="date" />
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label" data-lang="قسم" for="reportType">قسم</label>
+                                    <select class="form-select" id="reportType">
+                                        <option data-lang="تمام" value="">تمام</option>
+                                        <option data-lang="آمدنی" value="income">آمدنی</option>
+                                        <option data-lang="اخراجات" value="expense">اخراجات</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label" data-lang="مد" for="reportGroup">مد</label>
+                                    <select class="form-select" id="reportGroup"></select>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="form-label" data-lang="فنڈ کی قسم" for="reportFundType">فنڈ کی
                                         قسم</label>
-<select class="form-select" id="reportFundType">
-<option data-lang="تمام" value="">تمام</option>
-</select>
-</div>
-<div class="col-12 text-start">
-<button class="btn btn-primary me-2" data-lang="رپورٹ بنائیں" id="generateReportBtn">رپورٹ بنائیں</button>
-<button class="btn btn-info me-2" data-lang="رپورٹ پرنٹ کریں" id="printReportBtn">رپورٹ
+                                    <select class="form-select" id="reportFundType">
+                                        <option data-lang="تمام" value="">تمام</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 text-start">
+                                    <button class="btn btn-primary me-2" data-lang="رپورٹ بنائیں"
+                                        id="generateReportBtn">رپورٹ بنائیں</button>
+                                    <button class="btn btn-info me-2" data-lang="رپورٹ پرنٹ کریں"
+                                        id="printReportBtn">رپورٹ
                                         پرنٹ کریں</button>
-<button class="btn btn-success" data-lang="ایکسل پر تمام ڈیٹا ایکسپورٹ کریں" id="exportAllDataToExcelBtn">ایکسل پر تمام ڈیٹا
+                                    <button class="btn btn-success" data-lang="ایکسل پر تمام ڈیٹا ایکسپورٹ کریں"
+                                        id="exportAllDataToExcelBtn">ایکسل پر تمام ڈیٹا
                                         ایکسپورٹ کریں</button>
-</div>
-</div>
-</div>
-</div>
-<div class="tab-content">
-<div aria-labelledby="daily-ledger-report-tab" class="tab-pane fade show active" id="daily-ledger-report" role="tabpanel">
-<div class="card">
-<div class="card-header" data-lang="روزانہ لیجر رپورٹ">روزانہ لیجر رپورٹ</div>
-<div class="card-body">
-<div class="table-responsive">
-<table class="table table-striped">
-<thead>
-<tr>
-<th data-lang="تاریخ">تاریخ</th>
-<th data-lang="تفصیل">تفصیل</th>
-<th data-lang="آمدنی">آمدنی</th>
-<th data-lang="اخراجات">اخراجات</th>
-<th data-lang="بیلنس">بیلنس</th>
-</tr>
-</thead>
-<tbody id="dailyLedgerReportTableBody">
-<tr data-lang-row="منتخب فلٹرز کے لیے کوئی ڈیٹا دستیاب نہیں ہے۔">
-<td class="text-center" colspan="5">منتخب فلٹرز کے لیے کوئی ڈیٹا
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content">
+                        <div aria-labelledby="daily-ledger-report-tab" class="tab-pane fade show active"
+                            id="daily-ledger-report" role="tabpanel">
+                            <div class="card">
+                                <div class="card-header" data-lang="روزانہ لیجر رپورٹ">روزانہ لیجر رپورٹ</div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th data-lang="تاریخ">تاریخ</th>
+                                                    <th data-lang="تفصیل">تفصیل</th>
+                                                    <th data-lang="آمدنی">آمدنی</th>
+                                                    <th data-lang="اخراجات">اخراجات</th>
+                                                    <th data-lang="بیلنس">بیلنس</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="dailyLedgerReportTableBody">
+                                                <tr data-lang-row="منتخب فلٹرز کے لیے کوئی ڈیٹا دستیاب نہیں ہے۔">
+                                                    <td class="text-center" colspan="5">منتخب فلٹرز کے لیے کوئی ڈیٹا
                                                         دستیاب نہیں ہے۔</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-<div aria-labelledby="date-range-details-report-tab" class="tab-pane fade" id="date-range-details-report" role="tabpanel">
-<div class="card">
-<div class="card-header" data-lang="تاریخی حدود کی تفصیلات">تاریخی حدود کی تفصیلات</div>
-<div class="card-body">
-<div class="table-responsive">
-<table class="table table-striped">
-<thead>
-<tr>
-<th data-lang="ID">ID</th>
-<th data-lang="تاریخ">تاریخ</th>
-<th data-lang="قسم">قسم</th>
-<th data-lang="رقم">رقم</th>
-<th data-lang="فنڈ کی قسم">فنڈ کی قسم</th>
-<th data-lang="مد">مد</th>
-<th data-lang="دینے والا/وصول کنندہ">دینے والا/وصول کنندہ</th>
-<th data-lang="نوٹس">نوٹس</th>
-</tr>
-</thead>
-<tbody id="dateRangeDetailsReportTableBody">
-<tr data-lang-row="منتخب فلٹرز کے لیے کوئی ڈیٹا دستیاب نہیں ہے۔">
-<td class="text-center" colspan="8">منتخب فلٹرز کے لیے کوئی ڈیٹا
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div aria-labelledby="date-range-details-report-tab" class="tab-pane fade"
+                            id="date-range-details-report" role="tabpanel">
+                            <div class="card">
+                                <div class="card-header" data-lang="تاریخی حدود کی تفصیلات">تاریخی حدود کی تفصیلات</div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th data-lang="ID">ID</th>
+                                                    <th data-lang="تاریخ">تاریخ</th>
+                                                    <th data-lang="قسم">قسم</th>
+                                                    <th data-lang="رقم">رقم</th>
+                                                    <th data-lang="فنڈ کی قسم">فنڈ کی قسم</th>
+                                                    <th data-lang="مد">مد</th>
+                                                    <th data-lang="دینے والا/وصول کنندہ">دینے والا/وصول کنندہ</th>
+                                                    <th data-lang="نوٹس">نوٹس</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="dateRangeDetailsReportTableBody">
+                                                <tr data-lang-row="منتخب فلٹرز کے لیے کوئی ڈیٹا دستیاب نہیں ہے۔">
+                                                    <td class="text-center" colspan="8">منتخب فلٹرز کے لیے کوئی ڈیٹا
                                                         دستیاب نہیں ہے۔</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-<div aria-labelledby="monthly-summary-report-tab" class="tab-pane fade" id="monthly-summary-report" role="tabpanel">
-<div class="card">
-<div class="card-header" data-lang="ماہانہ خلاصہ رپورٹ">ماہانہ خلاصہ رپورٹ</div>
-<div class="card-body">
-<div class="table-responsive">
-<table class="table table-striped">
-<thead>
-<tr>
-<th data-lang="مہینہ">مہینہ</th>
-<th data-lang="کل آمدنی">کل آمدنی</th>
-<th data-lang="کل اخراجات">کل اخراجات</th>
-<th data-lang="خالص بیلنس">خالص بیلنس</th>
-</tr>
-</thead>
-<tbody id="monthlySummaryReportTableBody">
-<tr data-lang-row="منتخب فلٹرز کے لیے کوئی ڈیٹا دستیاب نہیں ہے۔">
-<td class="text-center" colspan="4">منتخب فلٹرز کے لیے کوئی ڈیٹا
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div aria-labelledby="monthly-summary-report-tab" class="tab-pane fade"
+                            id="monthly-summary-report" role="tabpanel">
+                            <div class="card">
+                                <div class="card-header" data-lang="ماہانہ خلاصہ رپورٹ">ماہانہ خلاصہ رپورٹ</div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th data-lang="مہینہ">مہینہ</th>
+                                                    <th data-lang="کل آمدنی">کل آمدنی</th>
+                                                    <th data-lang="کل اخراجات">کل اخراجات</th>
+                                                    <th data-lang="خالص بیلنس">خالص بیلنس</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="monthlySummaryReportTableBody">
+                                                <tr data-lang-row="منتخب فلٹرز کے لیے کوئی ڈیٹا دستیاب نہیں ہے۔">
+                                                    <td class="text-center" colspan="4">منتخب فلٹرز کے لیے کوئی ڈیٹا
                                                         دستیاب نہیں ہے۔</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-<div aria-labelledby="yearly-summary-report-tab" class="tab-pane fade" id="yearly-summary-report" role="tabpanel">
-<div class="card">
-<div class="card-header" data-lang="سالانہ خلاصہ رپورٹ">سالانہ خلاصہ رپورٹ</div>
-<div class="card-body">
-<div class="table-responsive">
-<table class="table table-striped">
-<thead>
-<tr>
-<th data-lang="سال">سال</th>
-<th data-lang="کل آمدنی">کل آمدنی</th>
-<th data-lang="کل اخراجات">کل اخراجات</th>
-<th data-lang="خالص بیلنس">خالص بیلنس</th>
-</tr>
-</thead>
-<tbody id="yearlySummaryReportTableBody">
-<tr data-lang-row="منتخب فلٹرز کے لیے کوئی ڈیٹا دستیاب نہیں ہے۔">
-<td class="text-center" colspan="4">منتخب فلٹرز کے لیے کوئی ڈیٹا
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div aria-labelledby="yearly-summary-report-tab" class="tab-pane fade"
+                            id="yearly-summary-report" role="tabpanel">
+                            <div class="card">
+                                <div class="card-header" data-lang="سالانہ خلاصہ رپورٹ">سالانہ خلاصہ رپورٹ</div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th data-lang="سال">سال</th>
+                                                    <th data-lang="کل آمدنی">کل آمدنی</th>
+                                                    <th data-lang="کل اخراجات">کل اخراجات</th>
+                                                    <th data-lang="خالص بیلنس">خالص بیلنس</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="yearlySummaryReportTableBody">
+                                                <tr data-lang-row="منتخب فلٹرز کے لیے کوئی ڈیٹا دستیاب نہیں ہے۔">
+                                                    <td class="text-center" colspan="4">منتخب فلٹرز کے لیے کوئی ڈیٹا
                                                         دستیاب نہیں ہے۔</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-<div aria-labelledby="group-wise-report-tab" class="tab-pane fade" id="group-wise-report" role="tabpanel">
-<div class="card">
-<div class="card-header" data-lang="مد وار رپورٹ">مد وار رپورٹ</div>
-<div class="card-body">
-<div class="table-responsive">
-<table class="table table-striped">
-<thead>
-<tr>
-<th data-lang="مد">مد</th>
-<th data-lang="کل آمدنی">کل آمدنی</th>
-<th data-lang="کل اخراجات">کل اخراجات</th>
-<th data-lang="خالص بیلنس">خالص بیلنس</th>
-</tr>
-</thead>
-<tbody id="groupWiseReportTableBody">
-<tr data-lang-row="منتخب فلٹرز کے لیے کوئی ڈیٹا دستیاب نہیں ہے۔">
-<td class="text-center" colspan="4">منتخب فلٹرز کے لیے کوئی ڈیٹا
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div aria-labelledby="group-wise-report-tab" class="tab-pane fade" id="group-wise-report"
+                            role="tabpanel">
+                            <div class="card">
+                                <div class="card-header" data-lang="مد وار رپورٹ">مد وار رپورٹ</div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th data-lang="مد">مد</th>
+                                                    <th data-lang="کل آمدنی">کل آمدنی</th>
+                                                    <th data-lang="کل اخراجات">کل اخراجات</th>
+                                                    <th data-lang="خالص بیلنس">خالص بیلنس</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="groupWiseReportTableBody">
+                                                <tr data-lang-row="منتخب فلٹرز کے لیے کوئی ڈیٹا دستیاب نہیں ہے۔">
+                                                    <td class="text-center" colspan="4">منتخب فلٹرز کے لیے کوئی ڈیٹا
                                                         دستیاب نہیں ہے۔</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-<div aria-labelledby="fund-balance-report-tab" class="tab-pane fade" id="fund-balance-report" role="tabpanel">
-<div class="card">
-<div class="card-header" data-lang="فنڈ بیلنس رپورٹ">فنڈ بیلنس رپورٹ</div>
-<div class="card-body">
-<div class="table-responsive">
-<table class="table table-striped">
-<thead>
-<tr>
-<th data-lang="فنڈ کی قسم">فنڈ کی قسم</th>
-<th data-lang="آمدنی">آمدنی</th>
-<th data-lang="اخراجات">اخراجات</th>
-<th data-lang="خالص بیلنس">خالص بیلنس</th>
-</tr>
-</thead>
-<tbody id="fundBalanceReportTableBody">
-<tr data-lang-row="منتخب فلٹرز کے لیے کوئی ڈیٹا دستیاب نہیں ہے۔">
-<td class="text-center" colspan="4">منتخب فلٹرز کے لیے کوئی ڈیٹا
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div aria-labelledby="fund-balance-report-tab" class="tab-pane fade" id="fund-balance-report"
+                            role="tabpanel">
+                            <div class="card">
+                                <div class="card-header" data-lang="فنڈ بیلنس رپورٹ">فنڈ بیلنس رپورٹ</div>
+                                <div class="card-body">
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th data-lang="فنڈ کی قسم">فنڈ کی قسم</th>
+                                                    <th data-lang="آمدنی">آمدنی</th>
+                                                    <th data-lang="اخراجات">اخراجات</th>
+                                                    <th data-lang="خالص بیلنس">خالص بیلنس</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="fundBalanceReportTableBody">
+                                                <tr data-lang-row="منتخب فلٹرز کے لیے کوئی ڈیٹا دستیاب نہیں ہے۔">
+                                                    <td class="text-center" colspan="4">منتخب فلٹرز کے لیے کوئی ڈیٹا
                                                         دستیاب نہیں ہے۔</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-<div aria-labelledby="zakat-report-tab" class="tab-pane fade" id="zakat-report" role="tabpanel">
-<div class="card">
-<div class="card-header" data-lang="زکوٰۃ رپورٹ">زکوٰۃ رپورٹ</div>
-<div class="card-body">
-<p><span data-lang="کل زکوٰۃ آمدنی">کل زکوٰۃ آمدنی</span>: <span id="totalZakatIncome">0.00</span> روپیہ</p>
-<p><span data-lang="کل زکوٰۃ اخراجات">کل زکوٰۃ اخراجات</span>: <span id="totalZakatExpenses">0.00</span> روپیہ</p>
-<p><span data-lang="زکوٰۃ فنڈ کا خالص بیلنس">زکوٰۃ فنڈ کا خالص بیلنس</span>: <span id="zakatNetBalance">0.00</span> روپیہ</p>
-<div class="table-responsive">
-<table class="table table-striped">
-<thead>
-<tr>
-<th data-lang="تاریخ">تاریخ</th>
-<th data-lang="قسم">قسم</th>
-<th data-lang="رقم">رقم</th>
-<th data-lang="مد">مد</th>
-<th data-lang="نوٹس">نوٹس</th>
-</tr>
-</thead>
-<tbody id="zakatReportTableBody">
-<tr data-lang-row="منتخب فلٹرز کے لیے کوئی ڈیٹا دستیاب نہیں ہے۔">
-<td class="text-center" colspan="5">منتخب فلٹرز کے لیے کوئی ڈیٹا
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div aria-labelledby="zakat-report-tab" class="tab-pane fade" id="zakat-report" role="tabpanel">
+                            <div class="card">
+                                <div class="card-header" data-lang="زکوٰۃ رپورٹ">زکوٰۃ رپورٹ</div>
+                                <div class="card-body">
+                                    <p><span data-lang="کل زکوٰۃ آمدنی">کل زکوٰۃ آمدنی</span>: <span
+                                            id="totalZakatIncome">0.00</span> روپیہ</p>
+                                    <p><span data-lang="کل زکوٰۃ اخراجات">کل زکوٰۃ اخراجات</span>: <span
+                                            id="totalZakatExpenses">0.00</span> روپیہ</p>
+                                    <p><span data-lang="زکوٰۃ فنڈ کا خالص بیلنس">زکوٰۃ فنڈ کا خالص بیلنس</span>: <span
+                                            id="zakatNetBalance">0.00</span> روپیہ</p>
+                                    <div class="table-responsive">
+                                        <table class="table table-striped">
+                                            <thead>
+                                                <tr>
+                                                    <th data-lang="تاریخ">تاریخ</th>
+                                                    <th data-lang="قسم">قسم</th>
+                                                    <th data-lang="رقم">رقم</th>
+                                                    <th data-lang="مد">مد</th>
+                                                    <th data-lang="نوٹس">نوٹس</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="zakatReportTableBody">
+                                                <tr data-lang-row="منتخب فلٹرز کے لیے کوئی ڈیٹا دستیاب نہیں ہے۔">
+                                                    <td class="text-center" colspan="5">منتخب فلٹرز کے لیے کوئی ڈیٹا
                                                         دستیاب نہیں ہے۔</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div aria-labelledby="settings-tab" class="tab-pane fade" id="settings" role="tabpanel">
-<h2 class="mb-4" data-lang="سیٹنگز اور سیکیورٹی">سیٹنگز اور سیکیورٹی</h2>
-<div class="card mb-4">
-<div class="card-body">
-<h5 class="card-title" data-lang="پاسورڈ تبدیل کریں">پاسورڈ تبدیل کریں</h5>
-<form id="changePasswordForm">
-<div class="mb-3">
-<label class="form-label" data-lang="موجودہ پاسورڈ" for="currentPassword">موجودہ
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div aria-labelledby="settings-tab" class="tab-pane fade" id="settings" role="tabpanel">
+                    <h2 class="mb-4" data-lang="سیٹنگز اور سیکیورٹی">سیٹنگز اور سیکیورٹی</h2>
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <h5 class="card-title" data-lang="پاسورڈ تبدیل کریں">پاسورڈ تبدیل کریں</h5>
+                            <form id="changePasswordForm">
+                                <div class="mb-3">
+                                    <label class="form-label" data-lang="موجودہ پاسورڈ" for="currentPassword">موجودہ
                                         پاسورڈ</label>
-<input class="form-control" id="currentPassword" required="" type="password"/>
-</div>
-<div class="mb-3">
-<label class="form-label" data-lang="نیا پاسورڈ" for="newPassword">نیا
+                                    <input class="form-control" id="currentPassword" required="" type="password" />
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" data-lang="نیا پاسورڈ" for="newPassword">نیا
                                         پاسورڈ</label>
-<input class="form-control" id="newPassword" required="" type="password"/>
-</div>
-<div class="mb-3">
-<label class="form-label" data-lang="نئے پاسورڈ کی تصدیق کریں" for="confirmNewPassword">نئے پاسورڈ کی تصدیق کریں</label>
-<input class="form-control" id="confirmNewPassword" required="" type="password"/>
-</div>
-<button class="btn btn-primary" data-lang="پاسورڈ تبدیل کریں" type="submit">پاسورڈ تبدیل
+                                    <input class="form-control" id="newPassword" required="" type="password" />
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label" data-lang="نئے پاسورڈ کی تصدیق کریں"
+                                        for="confirmNewPassword">نئے پاسورڈ کی تصدیق کریں</label>
+                                    <input class="form-control" id="confirmNewPassword" required="" type="password" />
+                                </div>
+                                <button class="btn btn-primary" data-lang="پاسورڈ تبدیل کریں" type="submit">پاسورڈ تبدیل
                                     کریں</button>
-<div class="mt-2" id="passwordChangeMessage"></div>
-</form>
-</div>
-</div>
-<div class="card">
-<div class="card-body">
-<h5 class="card-title" data-lang="ڈیٹا مینجمنٹ">ڈیٹا مینجمنٹ</h5>
-<button class="btn btn-info me-2" data-lang="ڈیٹا بیک اپ کریں (JSON)" id="backupDataBtn">ڈیٹا بیک
+                                <div class="mt-2" id="passwordChangeMessage"></div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title" data-lang="ڈیٹا مینجمنٹ">ڈیٹا مینجمنٹ</h5>
+                            <button class="btn btn-info me-2" data-lang="ڈیٹا بیک اپ کریں (JSON)"
+                                id="backupDataBtn">ڈیٹا بیک
                                 اپ کریں (JSON)</button>
-<input accept=".json" id="restoreDataInput" style="display: none;" type="file"/>
-<button class="btn btn-warning me-2" data-lang="ڈیٹا بحال کریں (JSON)" id="restoreDataBtn">ڈیٹا بحال کریں (JSON)</button>
-<button class="btn btn-danger" data-lang="تمام ڈیٹا صاف کریں" id="clearAllDataBtn">تمام ڈیٹا
+                            <input accept=".json" id="restoreDataInput" style="display: none;" type="file" />
+                            <button class="btn btn-warning me-2" data-lang="ڈیٹا بحال کریں (JSON)"
+                                id="restoreDataBtn">ڈیٹا بحال کریں (JSON)</button>
+                            <button class="btn btn-danger" data-lang="تمام ڈیٹا صاف کریں" id="clearAllDataBtn">تمام ڈیٹا
                                 صاف
                                 کریں</button>
-<div class="mt-2" id="dataManagementMessage"></div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div aria-hidden="true" aria-labelledby="addTransactionModalLabel" class="modal fade" id="addTransactionModal" tabindex="-1">
-<div class="modal-dialog modal-lg">
-<div class="modal-content">
-<div class="modal-header">
-<h5 class="modal-title" data-lang="ٹرانزیکشن شامل کریں/ترمیم کریں" id="addTransactionModalLabel">
+                            <div class="mt-2" id="dataManagementMessage"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div aria-hidden="true" aria-labelledby="addTransactionModalLabel" class="modal fade" id="addTransactionModal"
+        tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" data-lang="ٹرانزیکشن شامل کریں/ترمیم کریں" id="addTransactionModalLabel">
                         ٹرانزیکشن
                         شامل کریں/ترمیم کریں</h5>
-<button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
-</div>
-<form id="transactionForm">
-<input id="transactionId" type="hidden"/>
-<div class="modal-body">
-<div class="mb-3">
-<label class="form-label" data-lang="قسم" for="transactionType">قسم</label>
-<select class="form-select" id="transactionType" required="">
-<option data-lang="قسم منتخب کریں" value="">قسم منتخب کریں</option>
-<option data-lang="آمدنی" value="income">آمدنی</option>
-<option data-lang="اخراجات" value="expense">اخراجات</option>
-</select>
-</div>
-<div class="mb-3">
-<label class="form-label" data-lang="رقم" for="transactionAmount">رقم</label>
-<input class="form-control" id="transactionAmount" required="" step="0.01" type="number"/>
-</div>
-<div class="mb-3">
-<label class="form-label" data-lang="تاریخ" for="transactionDate">تاریخ</label>
-<input class="form-control" id="transactionDate" required="" type="date"/>
-</div>
-<div class="mb-3">
-<label class="form-label" data-lang="فنڈ کی قسم" for="transactionFundType">فنڈ کی
+                    <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+                </div>
+                <form id="transactionForm">
+                    <input id="transactionId" type="hidden" />
+                    <div class="modal-body">
+                        <div class="mb-3">
+                            <label class="form-label" data-lang="قسم" for="transactionType">قسم</label>
+                            <select class="form-select" id="transactionType" required="">
+                                <option data-lang="قسم منتخب کریں" value="">قسم منتخب کریں</option>
+                                <option data-lang="آمدنی" value="income">آمدنی</option>
+                                <option data-lang="اخراجات" value="expense">اخراجات</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" data-lang="رقم" for="transactionAmount">رقم</label>
+                            <input class="form-control" id="transactionAmount" required="" step="0.01" type="number" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" data-lang="تاریخ" for="transactionDate">تاریخ</label>
+                            <input class="form-control" id="transactionDate" required="" type="date" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" data-lang="فنڈ کی قسم" for="transactionFundType">فنڈ کی
                                 قسم</label>
-<select class="form-select" id="transactionFundType" required="">
-<option data-lang="فنڈ کی قسم منتخب کریں" value="">فنڈ کی قسم منتخب کریں</option>
-</select>
-</div>
-<div class="mb-3">
-<label class="form-label" data-lang="مد" for="transactionGroup">مد</label>
-<select class="form-select" id="transactionGroup" required=""></select>
-</div>
-<div class="mb-3">
-<label class="form-label" data-lang="نوٹس" for="transactionNotes">نوٹس</label>
-<textarea class="form-control" id="transactionNotes" rows="3"></textarea>
-</div>
-<div class="mb-3">
-<label class="form-label" data-lang="دینے والا/وصول کنندہ" for="transactionPayerPayee">دینے
+                            <select class="form-select" id="transactionFundType" required="">
+                                <option data-lang="فنڈ کی قسم منتخب کریں" value="">فنڈ کی قسم منتخب کریں</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" data-lang="مد" for="transactionGroup">مد</label>
+                            <select class="form-select" id="transactionGroup" required=""></select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" data-lang="نوٹس" for="transactionNotes">نوٹس</label>
+                            <textarea class="form-control" id="transactionNotes" rows="3"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" data-lang="دینے والا/وصول کنندہ" for="transactionPayerPayee">دینے
                                 والا/وصول
                                 کنندہ</label>
-<input class="form-control" id="transactionPayerPayee" type="text"/>
-</div>
-<div class="mb-3">
-<label class="form-label" for="transactionAddress">پتہ</label>
-<input class="form-control" id="transactionAddress" type="text"/>
-</div>
-<div class="mb-3 form-check">
-<input class="form-check-input" id="generateReceipt" type="checkbox"/>
-<label class="form-check-label" data-lang="رسید بنائیں" for="generateReceipt">رسید
+                            <input class="form-control" id="transactionPayerPayee" type="text" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="transactionAddress">پتہ</label>
+                            <input class="form-control" id="transactionAddress" type="text" />
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input class="form-check-input" id="generateReceipt" type="checkbox" />
+                            <label class="form-check-label" data-lang="رسید بنائیں" for="generateReceipt">رسید
                                 بنائیں</label>
-</div>
-</div>
-<div class="modal-footer">
-<button class="btn btn-secondary" data-bs-dismiss="modal" data-lang="بند کریں" type="button">بند
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-bs-dismiss="modal" data-lang="بند کریں" type="button">بند
                             کریں</button>
-<button class="btn btn-primary" data-lang="ٹرانزیکشن محفوظ کریں" type="submit">ٹرانزیکشن محفوظ
+                        <button class="btn btn-primary" data-lang="ٹرانزیکشن محفوظ کریں" type="submit">ٹرانزیکشن محفوظ
                             کریں</button>
-</div>
-</form>
-</div>
-</div>
-</div>
-<div aria-hidden="true" aria-labelledby="setPasswordModalLabel" class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" id="setPasswordModal" tabindex="-1">
-<div class="modal-dialog">
-<div class="modal-content">
-<div class="modal-header">
-<h5 class="modal-title" data-lang="ایپلی کیشن پاسورڈ سیٹ کریں" id="setPasswordModalLabel">ایپلی کیشن
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div aria-hidden="true" aria-labelledby="setPasswordModalLabel" class="modal fade" data-bs-backdrop="static"
+        data-bs-keyboard="false" id="setPasswordModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" data-lang="ایپلی کیشن پاسورڈ سیٹ کریں" id="setPasswordModalLabel">ایپلی کیشن
                         پاسورڈ سیٹ کریں</h5>
-</div>
-<form id="initialPasswordForm">
-<div class="modal-body">
-<p data-lang="براہ کرم ایپلیکیشن کے لیے ایک پاسورڈ سیٹ کریں۔ یہ محفوظ سیکشنز کے لیے درکار ہوگا۔">
+                </div>
+                <form id="initialPasswordForm">
+                    <div class="modal-body">
+                        <p
+                            data-lang="براہ کرم ایپلیکیشن کے لیے ایک پاسورڈ سیٹ کریں۔ یہ محفوظ سیکشنز کے لیے درکار ہوگا۔">
                             براہ
                             کرم ایپلیکیشن کے لیے ایک پاسورڈ سیٹ کریں۔ یہ محفوظ سیکشنز کے لیے درکار ہوگا۔</p>
-<div class="mb-3">
-<label class="form-label" data-lang="نیا پاسورڈ" for="initialNewPassword">نیا
+                        <div class="mb-3">
+                            <label class="form-label" data-lang="نیا پاسورڈ" for="initialNewPassword">نیا
                                 پاسورڈ</label>
-<input class="form-control" id="initialNewPassword" required="" type="password"/>
-</div>
-<div class="mb-3">
-<label class="form-label" data-lang="نئے پاسورڈ کی تصدیق کریں" for="initialConfirmNewPassword">نئے پاسورڈ کی تصدیق کریں</label>
-<input class="form-control" id="initialConfirmNewPassword" required="" type="password"/>
-</div>
-<div class="mt-2" id="initialPasswordMessage"></div>
-</div>
-<div class="modal-footer">
-<button class="btn btn-primary" data-lang="پاسورڈ سیٹ کریں" type="submit">پاسورڈ سیٹ
+                            <input class="form-control" id="initialNewPassword" required="" type="password" />
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" data-lang="نئے پاسورڈ کی تصدیق کریں"
+                                for="initialConfirmNewPassword">نئے پاسورڈ کی تصدیق کریں</label>
+                            <input class="form-control" id="initialConfirmNewPassword" required="" type="password" />
+                        </div>
+                        <div class="mt-2" id="initialPasswordMessage"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-primary" data-lang="پاسورڈ سیٹ کریں" type="submit">پاسورڈ سیٹ
                             کریں</button>
-</div>
-</form>
-</div>
-</div>
-</div>
-<script src="libs\html2canvas.min.js"></script>
-<script src="libs\dom-to-image-more.min.js"></script>
-<script src="libs\chart.js"></script>
-<link href="manifest.json" rel="manifest"/>
-<script src="libs/chartjs-plugin-datalabels.min.js"></script>
-<script src="libs/sha256.min.js"></script>
-<script src="libs/xlsx.full.min.js"></script>
-<script src="libs/bootstrap.bundle.min.js"></script>
-<script>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="libs\html2canvas.min.js"></script>
+    <script src="libs\dom-to-image-more.min.js"></script>
+    <script src="libs\chart.js"></script>
+    <link href="manifest.json" rel="manifest" />
+    <script src="libs/chartjs-plugin-datalabels.min.js"></script>
+    <script src="libs/sha256.min.js"></script>
+    <script src="libs/xlsx.full.min.js"></script>
+    <script src="libs/bootstrap.bundle.min.js"></script>
+    <script>
         const translations = {
             ur: {
                 "مدرسہ فنانس مینیجر": "مدرسہ فنانس مینیجر",
@@ -3932,26 +4010,28 @@
             });
         });
     </script>
-<script type="module">
-  import { Workbox } from 'https://storage.googleapis.com/workbox-cdn/releases/7.0.0/workbox-window.prod.mjs';
+    <script type="module">
+        import { Workbox } from 'https://storage.googleapis.com/workbox-cdn/releases/7.0.0/workbox-window.prod.mjs';
 
-  const swUrl = './sw.js';
-  const wb = new Workbox(swUrl);
+        const swUrl = './sw.js';
+        const wb = new Workbox(swUrl);
 
-  // This event fires when a new service worker has installed but is waiting to activate.
-  wb.addEventListener('waiting', (event) => {
-    console.log('A new service worker is waiting to activate.');
-    // This sends a message to the waiting service worker, telling it to activate.
-    wb.messageSW({ type: 'SKIP_WAITING' });
-  });
+        // This event fires when a new service worker has installed but is waiting to activate.
+        wb.addEventListener('waiting', (event) => {
+            console.log('A new service worker is waiting to activate.');
+            // This sends a message to the waiting service worker, telling it to activate.
+            wb.messageSW({ type: 'SKIP_WAITING' });
+        });
 
-  // This event fires when the new service worker has taken control.
-  wb.addEventListener('controlling', (event) => {
-    console.log('The new service worker is now in control. Reloading page for updates...');
-    window.location.reload();
-  });
+        // This event fires when the new service worker has taken control.
+        wb.addEventListener('controlling', (event) => {
+            console.log('The new service worker is now in control. Reloading page for updates...');
+            window.location.reload();
+        });
 
-  // Register the service worker.
-  wb.register();
-</script></body>
+        // Register the service worker.
+        wb.register();
+    </script>
+</body>
+
 </html>

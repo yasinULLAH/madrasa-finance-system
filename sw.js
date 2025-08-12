@@ -51,11 +51,11 @@ if (workbox) {
     },
     {
         "url": "index.html",
-        "revision": "73a0e328ae01c074f8ca1ad75002b58d"
+        "revision": "b50313c8bc725cf9cbd19c116f0e49d9"
     },
     {
         "url": "manifest.json",
-        "revision": "c69f9929cd98872f128fb022cb1f76e4"
+        "revision": "ef4c0b8f133f23abb91ec5bb70d20c94"
     },
     {
         "url": "offline.html",
@@ -63,7 +63,7 @@ if (workbox) {
     },
     {
         "url": "sw.js",
-        "revision": "91f397e2515230176e6f82c61101405d"
+        "revision": "0f1f236edc89fdef3c9141274ffbdab9"
     },
     {
         "url": "fonts/LhWNMUPbN-oZdNFcBy1-DJYsEoTq5pudQ9L940pGPkB3Qt_-DK0.ttf",
@@ -95,10 +95,6 @@ if (workbox) {
     },
     {
         "url": "libs/chartjs-plugin-datalabels.min.js",
-        "revision": "474739ea5d80b5c7a578f366c3b05cc6"
-    },
-    {
-        "url": "libs/chartjs-plugin-datalabels@2.0.0",
         "revision": "474739ea5d80b5c7a578f366c3b05cc6"
     },
     {
