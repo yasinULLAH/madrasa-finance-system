@@ -46,15 +46,11 @@ if (workbox) {
         "revision": "3d68d791052605e8692bab71b396a5f8"
     },
     {
-        "url": ".gitattributes",
-        "revision": "05bdb783ee6514c8c072e47680af8ff7"
-    },
-    {
         "url": "build pwa make html app offline and installable yasin best working re-run this for updates.py",
         "revision": "ce8e62bbacde6a60773ea36bfc4dbb2a"
     },
     {
-        "url": "madrasa finance.html",
+        "url": "index.html",
         "revision": "73a0e328ae01c074f8ca1ad75002b58d"
     },
     {
@@ -67,7 +63,7 @@ if (workbox) {
     },
     {
         "url": "sw.js",
-        "revision": "0e721c5782ff233464ca1c8800e476b7"
+        "revision": "91f397e2515230176e6f82c61101405d"
     },
     {
         "url": "fonts/LhWNMUPbN-oZdNFcBy1-DJYsEoTq5pudQ9L940pGPkB3Qt_-DK0.ttf",
