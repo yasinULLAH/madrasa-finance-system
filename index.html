@@ -1879,6 +1879,13 @@
                 sessionStorage.setItem('isAuthenticated', 'true');
                 const currentActiveTab = localStorage.getItem('activeTab') || 'dashboard';
                 activateTab(currentActiveTab);
+                if (!localStorage.getItem('sampleDataAlertShown')) {
+                    const alertMessage = "خوش آمدید! یہ ایپ نمونہ ڈیٹا کے ساتھ آتی ہے تاکہ آپ اس کی خصوصیات کو سمجھ سکیں۔ اپنا ڈیٹا داخل کرنا شروع کرنے کے لیے، آپ نمونے کے اندراجات کو ایک ایک کرکے حذف کر سکتے ہیں۔ 'ٹرانزیکشنز'، 'مدرسہ کے مالیاتی شعبے'، اور 'منصوبہ بندی' کے سیکشنز میں جائیں اور ہر آئٹم کے ساتھ موجود ڈیلیٹ آئیکن (🗑️) کا استعمال کریں۔";
+                    setTimeout(() => {
+                        alert(alertMessage);
+                        localStorage.setItem('sampleDataAlertShown', 'true');
+                    }, 4000);
+                }
             }, 1000);
         }
         async function handleChangePassword(event) {
@@ -4011,7 +4018,6 @@
             });
         });
     </script>
-
     <script type="module">
         import { Workbox } from 'https://storage.googleapis.com/workbox-cdn/releases/7.0.0/workbox-window.prod.mjs';
 
