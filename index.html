@@ -338,6 +338,13 @@
         .nav-link span {
             margin-right: 4px !important;
         }
+
+        #groupSummariesContainer span.text-danger {
+            background: red;
+            padding: 2px 13px;
+            color: white !important;
+            border-radius: 25px;
+        }
     </style>
     <link href="manifest.json" rel="manifest" />
     <link href="favicon.ico" rel="icon" type="image/x-icon" />
@@ -439,6 +446,9 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <h3 class="mt-5 mb-3" data-lang="خلاصہ بلحاظ مد">خلاصہ بلحاظ مد (Summary by Group)</h3>
+                    <div class="row" id="groupSummariesContainer">
                     </div>
                     <div class="row">
                         <div class="col-lg-6">
@@ -1994,6 +2004,7 @@
             switch (tabId) {
                 case 'dashboard':
                     await updateDashboardCharts();
+                    await updateGroupSummariesDashboard();
                     await updateUpcomingRecurringList();
                     await updateFrequentTransactionsList();
                     break;
@@ -2047,7 +2058,16 @@
             return date.toLocaleDateString('en-GB', { year: 'numeric', month: '2-digit', day: '2-digit' });
         }
         function formatCurrency(amount) {
-            return parseFloat(amount).toFixed(2) + ' روپیہ';
+            const parsedAmount = parseFloat(amount);
+            const formattedText = parsedAmount.toFixed(2) + ' روپیہ';
+
+            if (parsedAmount < 0) {
+                // If the amount is negative, wrap it in a span with the red color class
+                return `<span class="text-danger">${formattedText}</span>`;
+            }
+
+            // Otherwise, return it as normal
+            return formattedText;
         }
         let expenseBreakdownChart, incomeExpenseTrendChart;
         async function updateDashboardCharts() {
@@ -2070,8 +2090,8 @@
                     zakatBalance += (t.type === 'income' ? t.amount : -t.amount);
                 }
             });
-            document.getElementById('generalFundBalance').textContent = formatCurrency(generalBalance);
-            document.getElementById('zakatFundBalance').textContent = formatCurrency(zakatBalance);
+            document.getElementById('generalFundBalance').innerHTML = formatCurrency(generalBalance);
+            document.getElementById('zakatFundBalance').innerHTML = formatCurrency(zakatBalance);
         }
         async function updateMonthlySummary() {
             const today = new Date();
@@ -2304,6 +2324,53 @@
                     `;
                     list.appendChild(listItem);
                 }
+            }
+        }
+        async function updateGroupSummariesDashboard() {
+            // 1. Get all necessary data from the database
+            const transactions = await getAllFromDB('transactions');
+            const groups = await getAllFromDB('groups');
+
+            // 2. Create an object to hold the balance for each group
+            const groupBalances = {};
+            groups.forEach(group => {
+                groupBalances[group.id] = { name: group.name, balance: 0 };
+            });
+
+            // 3. Calculate the balance for each group from transactions
+            transactions.forEach(t => {
+                if (groupBalances[t.groupId]) {
+                    const amount = (t.type === 'income' ? t.amount : -t.amount);
+                    groupBalances[t.groupId].balance += amount;
+                }
+            });
+
+            // 4. Get the container element we created in Step 1
+            const container = document.getElementById('groupSummariesContainer');
+            container.innerHTML = ''; // Clear any old content
+
+            // 5. Define card colors to cycle through
+            const cardColors = ['bg-secondary', 'bg-dark', 'bg-warning', 'bg-info', 'bg-primary', 'bg-success', 'bg-danger'];
+            let colorIndex = 0;
+
+            // 6. Create and add a summary card for each group
+            for (const groupId in groupBalances) {
+                const groupData = groupBalances[groupId];
+
+                const cardColor = cardColors[colorIndex % cardColors.length];
+                colorIndex++;
+
+                const cardHtml = `
+            <div class="col-md-6 col-lg-3">
+                <div class="card ${cardColor} text-white">
+                    <div class="card-body">
+                        <h5 class="card-title">${groupData.name}</h5>
+                        <p class="card-text fs-3">${formatCurrency(groupData.balance)}</p>
+                    </div>
+                </div>
+            </div>
+        `;
+                container.innerHTML += cardHtml;
             }
         }
         async function updateFrequentTransactionsList() {
@@ -3401,9 +3468,9 @@
                     <td>${t.notes || 'N/A'}</td>
                 `;
             });
-            document.getElementById('totalZakatIncome').textContent = formatCurrency(totalZakatIncome);
-            document.getElementById('totalZakatExpenses').textContent = formatCurrency(totalZakatExpenses);
-            document.getElementById('zakatNetBalance').textContent = formatCurrency(totalZakatIncome - totalZakatExpenses);
+            document.getElementById('totalZakatIncome').innerHTML = formatCurrency(totalZakatIncome);
+            document.getElementById('totalZakatExpenses').innerHTML = formatCurrency(totalZakatExpenses);
+            document.getElementById('zakatNetBalance').innerHTML = formatCurrency(totalZakatIncome - totalZakatExpenses);
             if (!hasData) {
                 document.querySelector('#zakatReportTableBody tr:first-child').style.display = 'table-row';
             }
@@ -4029,12 +4096,12 @@
         const swUrl = './sw.js';
         const wb = new Workbox(swUrl);
 
-        wb.addEventListener('waiting', (event) => {
+        wb.addEventListener('waiting', () => {
             console.log('A new service worker is waiting to activate.');
             wb.messageSW({ type: 'SKIP_WAITING' });
         });
 
-        wb.addEventListener('controlling', (event) => {
+        wb.addEventListener('controlling', () => {
             console.log('The new service worker is now in control. Reloading page for updates...');
             window.location.reload();
         });

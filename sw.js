@@ -14,35 +14,43 @@ if (workbox) {
     workbox.precaching.precacheAndRoute([
     {
         "url": "icon-72.png",
-        "revision": "be2d423b934b9c0b01d83184d3d4aa59"
+        "revision": "d7e2fea916659bbf271b4632f028fed5"
     },
     {
         "url": "icon-96.png",
-        "revision": "68bc111c2ddf34ecb0f446c5401b6906"
+        "revision": "f1bdf68dd999551760088eb79f5cbcba"
     },
     {
         "url": "icon-128.png",
-        "revision": "190a33883d0b48d87d84cba89ef60d47"
+        "revision": "1ec8980d1a4a78149a5ec7aac0a52a79"
     },
     {
         "url": "icon-144.png",
-        "revision": "6a03fe4fafbbe1a7114f808f2c7e447a"
+        "revision": "70839b0a9ce56b64a72ca87b9c29f139"
     },
     {
         "url": "icon-152.png",
-        "revision": "71f71a48af9554d3087248e67965040f"
+        "revision": "24fd20976f6dc6d81b99bdecd571fced"
     },
     {
         "url": "icon-192.png",
-        "revision": "445eafa87e5dae0090d9389487c5d532"
+        "revision": "286958b45be08bdc916b8e3126b2203d"
     },
     {
         "url": "icon-384.png",
-        "revision": "3b1f7dea813cbec85b21ee8147eb5100"
+        "revision": "d3d46f60ff5014f7d85d047e1c55329f"
     },
     {
         "url": "icon-512.png",
-        "revision": "3d68d791052605e8692bab71b396a5f8"
+        "revision": "1a98134a086859d517de611e9e0579bc"
+    },
+    {
+        "url": "favicon.ico",
+        "revision": "7cbcf8be98d3ce63133537d07504db0f"
+    },
+    {
+        "url": "build pwa make html app offline and installable yasin best working re-run this for updates best for html only.py",
+        "revision": "912a9d55d74613b8f4f07180d0df1fd3"
     },
     {
         "url": "build pwa make html app offline and installable yasin best working re-run this for updates new.py",
@@ -53,12 +61,8 @@ if (workbox) {
         "revision": "ce8e62bbacde6a60773ea36bfc4dbb2a"
     },
     {
-        "url": "favicon.ico",
-        "revision": "9443c975b011f43a500e86f7cf458a9e"
-    },
-    {
         "url": "index.html",
-        "revision": "986f1a12ab524b0da7cbb0c2fa111c58"
+        "revision": "8868b1bd3751bc35098c5e65140ba054"
     },
     {
         "url": "logo.jpg",
@@ -66,15 +70,15 @@ if (workbox) {
     },
     {
         "url": "manifest.json",
-        "revision": "573ac5a0351bc257b4e6ddff5cd7ff4d"
+        "revision": "ef4c0b8f133f23abb91ec5bb70d20c94"
     },
     {
         "url": "offline.html",
-        "revision": "ae51d343db40057d79a35f860555d2b1"
+        "revision": "8987c4b748db7cbdf5e4c6165507121b"
     },
     {
         "url": "sw.js",
-        "revision": "eb49dc17a41bd1e4ce069e3e1338338b"
+        "revision": "187440438f233506251e967c6401a178"
     },
     {
         "url": "fonts/LhWNMUPbN-oZdNFcBy1-DJYsEoTq5pudQ9L940pGPkB3Qt_-DK0.ttf",
